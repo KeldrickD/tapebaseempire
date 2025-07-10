@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111111;
+    --foreground: #ffffff;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80%;
+}
+
+/* Custom styles for TapBase Empire UI Graphics */
+
+/* Tap Button */
+.tap-button {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.tap-button:active {
+  transform: scale(0.95);
+}
+
+/* Coin Pop Effect */
+.coin-pop {
+  position: absolute;
+  animation: pop-up 0.5s ease-out;
+  font-size: 20px;
+  color: gold;
+}
+
+@keyframes pop-up {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-50px); opacity: 0; }
+}
+
+/* Points Counter */
+.points-counter {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FFD700;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #ddd;
+  border-radius: 10px;
+  height: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+
+/* Streak Indicator */
+.streak-indicator {
+  background: #FF4500;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Upgrade Button */
+.upgrade-button {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.3s;
+}
+
+.upgrade-button:hover {
+  background: linear-gradient(135deg, #66BB6A, #43A047);
+}
+
+/* Menu Panel */
+.menu-panel {
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+}
+
+/* Main Background */
+body {
+  background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+}
+
+/* Idle Animation */
+.idle-rig {
+  animation: idle-bob 2s infinite;
+}
+
+@keyframes idle-bob {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Jackpot Effect */
+.jackpot {
+  animation: flash 0.5s;
+  color: red;
+  font-size: 40px;
+}
+
+@keyframes flash {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Leaderboard Button */
+.leaderboard-button {
+  background: #2196F3;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Referral Button */
+.referral-button {
+  background: #FF9800;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Reward Notification */
+.reward-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  animation: slide-down 3s;
+}
+
+@keyframes slide-down {
+  0% { transform: translateY(-100%); }
+  10% { transform: translateY(0); }
+  90% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+/* SVG Icons can be inline in JSX */
