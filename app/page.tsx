@@ -9,7 +9,7 @@ export default function Home() {
   const [points, setPoints] = useState(0);
   const level = 1;
   const streak = 0;
-  const [progress, setProgress] = useState(0);
+  const progress = 0;
   const [showCoinPop, setShowCoinPop] = useState(false);
   const [showReward, setShowReward] = useState(false);
   const { setFrameReady } = useMiniKit();
@@ -21,7 +21,7 @@ export default function Home() {
       setPoints((prev) => prev + 1); // Add 1 point every 10 seconds for idle earnings
     }, 10000);
     return () => clearInterval(interval);
-  }, []);
+  }, [setFrameReady]);
 
   const handleTap = () => {
     setPoints(points + 1);
