@@ -184,3 +184,43 @@ body {
 }
 
 /* SVG Icons can be inline in JSX */
+
+/* Leaderboard Modal */
+.leaderboard-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  max-width: 300px;
+  animation: fade-in 0.3s;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Event Banner */
+.event-banner {
+  background: #FFEB3B;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Enhanced Tap Button Animation */
+.tap-button:hover {
+  animation: pulse 1s infinite;
+}
